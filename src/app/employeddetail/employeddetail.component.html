@@ -7,6 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form class="d-flex form-inline my-2 my-lg-0">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add employee</button>
+
       </form>
     </div>
   </nav>
@@ -17,14 +18,17 @@
         <th scope="col">First</th>
         <th scope="col">Last</th>
         <th scope="col">E mail</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let a of empdata">
-        <th scope="row">1</th>
+        <th scope="row">{{a.id}}</th>
         <td >{{a.first_name}}</td>
         <td>{{a.last_name}}</td>
         <td>{{a.email_id}}</td>
+        <td><button type="button" class="btn btn-danger"  (click)="ondelete(a.id)">Delete</button>&nbsp;
+            <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onedit(a)">Edit</button></td>
       </tr>
 
       
@@ -63,6 +67,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="oncreate(emp)">Add employee</button>
+          <button type="button" class="btn btn-success" (click)="onupdate(emp)">Update</button>
         </div>
       </div>
     </div>
