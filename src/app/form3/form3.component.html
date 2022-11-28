@@ -1,0 +1,25 @@
+<br><br><hr>
+<form #signin="ngForm" (ngSubmit)="log1(signin)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input required type="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #signemail="ngModel" [(ngModel)]="obj1.email" name="email">
+      <div *ngIf="signemail.touched && signemail.errors?.['required']  ">its required</div>
+      <div *ngIf="signemail.errors?.['email']"> invalid email</div>
+    </div><br>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" minlength="8" maxlength="15" required type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+       class="form-control" id="exampleInputPassword1" placeholder="Password" #signpassword="ngModel" [(ngModel)]="obj1.password" name="password">
+      <div *ngIf="signpassword.invalid && (signpassword.dirty || signpassword.touched)">
+        <div *ngIf="signpassword.errors?.['required']">Password is required
+        </div>
+        <div *ngIf="signpassword.errors?.['minlength']">
+            minimum 8 character is required
+        </div>
+        <div *ngIf="signpassword.errors?.['pattern']"> It shoud have one upper case,one lower case ,numbers and a special character</div>
+        
+
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

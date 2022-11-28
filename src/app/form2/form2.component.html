@@ -1,0 +1,22 @@
+<br><hr>
+<form #signup="ngForm" (ngSubmit)="sign(signup)" >
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input required type="text" class="form-control" #nameid="ngModel" aria-describedby="emailHelp" name="name" [(ngModel)]="sign2.name">
+      </div>
+    <div class="mb-3">
+      <label class="form-label">Email address</label>
+      <input required type="email" class="form-control" #emilid="ngModel" aria-describedby="emailHelp" name="email" [(ngModel)]="sign2.email">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input required type="password" #passwordid="ngModel" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="sign2.password">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input required type="password" #confirmpassword="ngModel" class="form-control" id="exampleInputPassword1" name="confirmpassword" [(ngModel)]="sign2.confirmpassword">
+      </div>
+
+    <button [disabled]="signup.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>

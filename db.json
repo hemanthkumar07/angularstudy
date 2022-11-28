@@ -1,0 +1,26 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "first_name": "hemanth",
+      "last_name": "kumar",
+      "email_id":"h.hemanthkumar01@gmail.com"
+    },
+    {
+      "id": 2,
+      "first_name": "rahul",
+      "last_name": "sp",
+      "email_id":"rahulsp@gmail.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,110 @@
+<!-- <p>databinding works!</p> -->
+<!-- interpolation -->
+<!-- <p>{{title1}}</p>
+<p>{{2+5}}</p>
+<img src="{{img1}}" width="50px"> -->
+<!-- property binding -->
+
+<!-- <h3 [innerText]="title1"></h3>
+<h2 [hidden]="bool">hi</h2>
+<button [disabled]="true1">hi</button> -->
+
+<!-- event binding -->
+<!-- <button (click)="cli1()">submit</button>
+<button (click)="cli2()">save</button>
+<input type="text" (input)="input1($event)">
+<p>{{ab}}</p> -->
+
+
+<!-- 2 way -->
+<!-- <input [(ngModel)]="abc">
+<p>{{abc}}</p> -->
+
+
+
+<!-- directives -->
+
+<!-- <div *ngIf="isloggedin">
+    <h3> welcome user</h3>
+</div>
+<div *ngIf="!isloggedin">
+    <h3>hello user</h3>
+</div>
+
+<div *ngIf="!isloggedin; else logout">
+    <h3>hello user</h3>
+</div>
+
+<ng-template #logout>
+    <h3>hiiiiiii</h3>
+</ng-template>
+
+<hr>
+<div *ngIf="isloggedin; then login; else logout2">
+    <h3>if message</h3>
+</div>
+<ng-template #login>
+    <h3>then message</h3>
+</ng-template>
+<ng-template #logout2>
+    <h3>else message</h3>
+</ng-template> -->
+<!-- for -->
+<!-- <hr>
+<div *ngFor="let person of people">
+    <h3>{{person.name}} |  {{person.country}}</h3>
+</div>
+
+<hr><hr>
+
+<div *ngFor="let person of people; let i =index">
+    <h3>{{i+1}}.{{person.name}} |  {{person.country}}</h3>
+</div> -->
+<!-- switch -->
+
+<!-- 
+<div [ngSwitch]="superhero">
+    <h4 *ngSwitchCase="'ironman'">Ironman</h4>
+    <h4 *ngSwitchCase="'hulk'">Hulk</h4>
+    <h4 *ngSwitchCase="'batman'">Batman</h4>
+    <h4 *ngSwitchDefault>None</h4>
+</div> -->
+
+
+
+<!-- ng style -->
+<!-- <div [ngStyle]="{'color':'red'}">hello world
+</div>
+<div [ngStyle]="{'color':'red','margin-left':'20%'}">hello world
+</div>
+<div [ngStyle]="{'color':color1}">hello world
+</div>
+<div [ngStyle]="{'color':color1 === 'pink' ?'black' :'blue'}">hello world
+</div>
+<hr> -->
+
+<!-- ngclass -->
+<!-- <div [ngClass]="'c1'">ng class</div>
+
+<div [ngClass]="'c1 c2 c3'">ng class multiple</div> -->
+
+
+<!-- pipes -->
+
+<p>{{title1 | uppercase}}</p>
+<p>{{title2 | lowercase}}</p>
+<p>{{a | currency}}</p>
+<p>{{a | currency:"INR"}}</p>
+<p>{{a | currency:"EUR"}}</p>
+<p>{{dec | number:"1.4"| currency }}</p>
+<p>{{date | date}}</p>
+<p>{{date | date:"medium"}}</p>
+
+<p>{{5 | square}}</p>
+
+<p>{{"hi theRe" | titlecase}}
+</p>
+<input [(ngModel)]="defg">
+<div *ngFor="let agh of arr1 | filter:defg">
+    <h3>{{agh.name}} |  {{agh.age}} | {{agh.place}}</h3>
+</div>
